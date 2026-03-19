@@ -38,7 +38,7 @@ label-studio-ml-backend/
 
 The CLI script is at:
 ```
-C:\Users\melvinoseiopoku\label-studio-ml-backend\label_studio_ml\examples\yolo\cli.py
+C:\Users\"username"\label-studio-ml-backend\label_studio_ml\examples\yolo\cli.py
 ```
 
 ---
@@ -60,7 +60,7 @@ Before running the CLI:
 This only needs to be done once. Install `label_studio_ml` into the LabelStudioApp Python environment:
 
 ```bash
-C:\LabelStudioApp\env\Scripts\pip.exe install -e C:\Users\melvinoseiopoku\label-studio-ml-backend
+C:\LabelStudioApp\env\Scripts\pip.exe install -e C:\Users\"username"\label-studio-ml-backend
 ```
 
 > **Why this environment?** The desktop shortcut runs Label Studio from `C:\LabelStudioApp\env`. The CLI must use the same Python environment so its dependencies are compatible. Running `cli.py` with the miniconda Python will fail with `ModuleNotFoundError: No module named 'rq'` because `rq` uses Unix `fork` which is not available on Windows.
@@ -119,7 +119,7 @@ set LABEL_STUDIO_API_KEY=YOUR_TOKEN_HERE
 ```bash
 set LABEL_STUDIO_URL=http://localhost:8080
 set LABEL_STUDIO_API_KEY=YOUR_TOKEN_HERE
-C:\LabelStudioApp\env\Scripts\python.exe C:\Users\melvinoseiopoku\label-studio-ml-backend\label_studio_ml\examples\yolo\cli.py --ls-url http://localhost:8080 --ls-api-key YOUR_TOKEN_HERE --project 4 --tasks 11
+C:\LabelStudioApp\env\Scripts\python.exe C:\Users\"username"\label-studio-ml-backend\label_studio_ml\examples\yolo\cli.py --ls-url http://localhost:8080 --ls-api-key YOUR_TOKEN_HERE --project 4 --tasks 11
 ```
 
 ### Single task
