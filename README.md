@@ -57,13 +57,33 @@ Before running the CLI:
 
 ## First-Time Setup
 
-This only needs to be done once. Install `label_studio_ml` into the LabelStudioApp Python environment:
+This only needs to be done once:
+	•	create/activate an environment
+	•	install requirements-base.txt
+	•	install requirements.txt
 
 ```bash
-C:\LabelStudioApp\env\Scripts\pip.exe install -e C:\Users\"username"\label-studio-ml-backend
+cd C:\Users\"username"\label-studio-ml-backend
+conda create --name yolo-cli
+conda activate yolo-cli
+pip install -r requirements-base.txt
+pip install -r requirements.txt
+pip install -e .
 ```
 
-> **Why this environment?** The desktop shortcut runs Label Studio from `C:\LabelStudioApp\env`. The CLI must use the same Python environment so its dependencies are compatible. Running `cli.py` with the miniconda Python will fail with `ModuleNotFoundError: No module named 'rq'` because `rq` uses Unix `fork` which is not available on Windows.
+> **What each line does?** 
+	•	cd C:\Users\"username"\label-studio-ml-backend
+moves to the repo root, which is where installation should happen
+	•	conda create --name yolo-cli
+create an environment called yolo-cli to run cli
+	•	conda activate yolo-cli
+switches into yolo-cli environment
+	•	pip install -r requirements-base.txt
+installs core backend dependencies
+	•	pip install -r requirements.txt
+installs the rest of the repo dependencies
+	•	pip install -e .
+installs the repo in editable mode, so Python can import label_studio_ml
 
 ---
 
@@ -117,9 +137,12 @@ set LABEL_STUDIO_API_KEY=YOUR_TOKEN_HERE
 ### Full execution sequence (copy-paste ready)
 
 ```bash
+conda activate yolo-cli
+set PYTHONPATH=C:\Users\"username"\label-studio-ml-backend
 set LABEL_STUDIO_URL=http://localhost:8080
 set LABEL_STUDIO_API_KEY=YOUR_TOKEN_HERE
-C:\LabelStudioApp\env\Scripts\python.exe C:\Users\"username"\label-studio-ml-backend\label_studio_ml\examples\yolo\cli.py --ls-url http://localhost:8080 --ls-api-key YOUR_TOKEN_HERE --project 4 --tasks 11
+cd C:\Users\"username"\label-studio-ml-backend\label_studio_ml\examples\yolo
+python cli.py --ls-url http://localhost:8080 --ls-api-key YOUR_TOKEN_HERE --project 4 --tasks 12
 ```
 
 ### Single task
