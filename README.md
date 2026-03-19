@@ -71,18 +71,18 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-> **What each line does?** 
-	•	cd C:\Users\"username"\label-studio-ml-backend
+> **What each line does?**
+> cd C:\Users\"username"\label-studio-ml-backend
 moves to the repo root, which is where installation should happen
-	•	conda create --name yolo-cli
+> conda create --name yolo-cli
 create an environment called yolo-cli to run cli
-	•	conda activate yolo-cli
+> conda activate yolo-cli
 switches into yolo-cli environment
-	•	pip install -r requirements-base.txt
+> pip install -r requirements-base.txt
 installs core backend dependencies
-	•	pip install -r requirements.txt
+> pip install -r requirements.txt
 installs the rest of the repo dependencies
-	•	pip install -e .
+> pip install -e .
 installs the repo in editable mode, so Python can import label_studio_ml
 
 ---
