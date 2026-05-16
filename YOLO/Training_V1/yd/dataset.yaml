@@ -1,0 +1,12 @@
+path: .
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: LED
+  1: Rest
+  2: Talking
+  3: Vocal Tic
+  4: Motor Tic
+  5: Right Vol Mov
+  6: Left Vol Mov

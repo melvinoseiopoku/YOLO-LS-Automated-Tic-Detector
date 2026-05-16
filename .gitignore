@@ -1,0 +1,19 @@
+.DS_Store
+Thumbs.db
+*.asv
+*.cache
+__pycache__/
+.ipynb_checkpoints/
+
+# Keep raw media and generated training datasets local.
+*.MP4
+*.mp4
+YOLO/Training_V1/videos/
+YOLO/Training_V1/yd/images/
+YOLO/Training_V1/yd/labels/
+YOLO/Training_V1/yolo_dataset/images/
+YOLO/Training_V1/yolo_dataset/labels/
+
+# Keep annotation exports and model weights local unless explicitly approved.
+YOLO/Training_V1/training.json
+*.pt
